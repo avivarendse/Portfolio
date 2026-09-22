@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div class="nav-container">
-      <a href="#hero" class="nav-logo" @click.prevent="onNavClick('#hero')">AA.</a>
+      <a href="#hero" class="nav-logo" @click="closeMenu">AA.</a>
 
       <button
         class="menu-toggle"
@@ -14,7 +14,7 @@
 
       <ul class="nav-links" :class="{ active: menuOpen }">
         <li v-for="link in links" :key="link.href">
-          <a :href="link.href" @click.prevent="onNavClick(link.href)">
+          <a :href="link.href" @click="closeMenu">
             {{ link.label }}
           </a>
         </li>
@@ -25,9 +25,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useSmoothScroll } from '../composables/useSmoothScroll'
 
-const { scrollToHash } = useSmoothScroll()
 const menuOpen = ref(false)
 
 const links = [
@@ -44,10 +42,5 @@ function toggleMenu() {
 
 function closeMenu() {
   menuOpen.value = false
-}
-
-function onNavClick(hash) {
-  scrollToHash(hash)
-  closeMenu()
 }
 </script>
