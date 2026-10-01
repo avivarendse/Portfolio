@@ -1,5 +1,5 @@
 <template>
-  <section id="education">
+  <section id="education" v-reveal>
     <div class="container">
       <h2>EDUCATION</h2>
 

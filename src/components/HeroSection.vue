@@ -1,5 +1,5 @@
 <template>
-  <section id="hero">
+  <section id="hero" v-reveal>
     <div class="container hero-container">
       <div class="hero-text">
         <h1>Hi, I'm Aviv Arendse</h1>

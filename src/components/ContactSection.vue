@@ -1,5 +1,5 @@
 <template>
-  <section id="contact">
+  <section id="contact" v-reveal>
     <div class="container contact-container">
       <div class="contact-text">
         <h2>Contact Me</h2>

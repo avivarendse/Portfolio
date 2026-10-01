@@ -1,5 +1,5 @@
 <template>
-  <section id="about">
+  <section id="about" v-reveal>
     <div class="container">
       <h2>ABOUT ME</h2>
 

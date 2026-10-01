@@ -567,6 +567,26 @@ footer {
    animation: fadeIn 0.8s ease forwards;
 }
 
+.scroll-reveal {
+   opacity: 0;
+   transform: translateY(16px) scale(0.99);
+   transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.scroll-reveal.is-visible {
+   opacity: 1;
+   transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+   .scroll-reveal,
+   .scroll-reveal.is-visible {
+      opacity: 1;
+      transform: none;
+      transition: none;
+   }
+}
+
 /* ================================
    9. MEDIA QUERIES
    ================================ */
